@@ -1,10 +1,8 @@
 <?php
-// data/config.php
-
 $host = 'localhost';
-$db   = 'facture-devis';
-$user = 'root';
-$pass = '';
+$db   = 'gestion_factures';
+$user = 'votre_utilisateur';
+$pass = 'votre_mot_de_passe';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -15,8 +13,7 @@ $options = [
 ];
 
 try {
-     $pdo = new PDO($dsn, $user, $pass, $options);
+    $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-?>
